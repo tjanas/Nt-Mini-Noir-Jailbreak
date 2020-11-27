@@ -1060,7 +1060,9 @@ GROM binary `grom.bin` placed in the `/BIOS/` directory (expected
 CRC32: 683A4158).
 
 To use the Intellivoice, the 2K ROM for the speech chip has to be
-present in the `/BIOS/` directory and named `012.bin`.
+present in the `/BIOS/` directory and named `012.bin` (expected CRC32: `8BD786EC`).
+
+This can be constructed by reversing the bit order of each and every byte from the commonly-found `[BIOS] Intellivoice (USA, Europe).int` / `IntelliVoice BIOS (1981) (Mattel).int` file with CRC32: `0DE7579D`. For example, the first byte in the commonly-found file has a value of `0xE8` / `0b11101000`. In `012.bin`, this byte should be `0x17` / `0b00010111`.
 
 
 ## Controller support

@@ -1201,7 +1201,10 @@ Y = fire button
 # Channel F Core Release Notes
 
 The Channel F BIOS is required to be present in the `/BIOS/` directory
-and it must be named `cfbios.bin` (expected CRC32: `2882C02D`).
+and it must be named `cfbios.bin` (expected CRC32: `2882C02D`). `cfbios.bin` is a concatenation of `[BIOS] Fairchild Channel F (USA) (SL31253).bin` (CRC32:`04694ED9`) + `[BIOS] Fairchild Channel F (USA) (SL31254).bin` (CRC32:`9C047BA3`).
+
+Example via Windows command-line:
+`COPY /B sl31253.bin + sl31254.bin cfbios.bin`
 
 
 ## Button mapping
